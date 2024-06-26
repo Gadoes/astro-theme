@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}', 'node_modules/preline/dist/*.js'],
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {
@@ -362,6 +362,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        '"Montserrat Variable"',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
@@ -964,5 +965,7 @@ module.exports = {
     'active',
     'disabled',
   ],
-  plugins: [],
+  plugins: [
+    require('preline/plugin'),
+  ],
 }

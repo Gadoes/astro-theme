@@ -13,19 +13,44 @@ import AppHeader from "../components/AppHeader.astro";
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content="Template built with tailwindcss using Tailus blocks v2" />
         <title>Tailus astro theme</title>
-        <AstroFont
+        <!-- <AstroFont
             config={[
                 {
                     src: [],
-                    name: "Urbanist",
+                    //name: "Urbanist",
+                    name: "Montserrat",
                     preload: true,
                     display: "swap",
                     selector: "html",
                     fallback: "sans-serif",
-                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap',
+                    //googleFontsURL: 'https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap',
+                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Montserrat',
                 },
             ]}
-        />
+        /> -->
+        <AstroFont
+        config={[
+          {
+            name: "Montserrat",
+            src: [
+              {
+                style: 'normal',
+                weight: '400',
+                path: 'https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXp-p7K4KLg.woff2'
+              },
+              {
+                style: 'normal',
+                weight: '700',
+                path: 'https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXp-p7K4KLg.woff2'
+              },
+            ],
+            preload: true,
+            display: "swap",
+            selector: "body",
+            fallback: "sans-serif",
+          },
+        ]}
+      />
     </head>
     <body class="bg-white dark:bg-gray-900">
         <AppHeader />
